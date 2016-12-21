@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:orientation="vertical">
+    <!-- <include
+
+
+         android:id="@+id/ll_filter_activity"
+         layout="@layout/activity_filter_dashboard"
+         />-->
+    <LinearLayout
+        android:id="@+id/ll_filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/App_black_trans"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_heading_mealType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="Meal Type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/activity_medium_textSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_veg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_vegDisable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circle_meal_type_disable"
+                        android:padding="30dp"
+                        android:src="@mipmap/veg" />
+
+                    <ImageView
+                        android:id="@+id/iv_vegEnable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/meal_type_veg"
+                        android:padding="30dp"
+                        android:src="@mipmap/veg_disable"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_mealType_veg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="Veg"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/activity_small_textSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_nonVeg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_nonVegDisable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circle_meal_type_disable"
+                        android:padding="30dp"
+                        android:src="@mipmap/nonveg_disable" />
+
+                    <ImageView
+                        android:id="@+id/iv_nonVegEnable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/meal_type_non_veg"
+                        android:padding="30dp"
+                        android:src="@mipmap/nonveg"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_mealType_non_veg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="Non-Veg"
+                        android:textColor="@color/gray" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_applyFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/App_blue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Apply Filter"
+                android:textSize="@dimen/activity_medium_textSize"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg_orderType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/rb_oneDayOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/App_blue"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="One Day Order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_medium_textSize" />
+
+            <RadioButton
+                android:id="@+id/rb_subscribe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/App_Gray"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Subscribe"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_medium_textSize" />
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioGroup
+                        android:id="@+id/rg_mealTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/disable_round"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_breakfast"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1.2"
+                            android:button="@null"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@mipmap/breakfast_white"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Breakfast"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/activity_small_textSize" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/App_Gray" />
+
+                        <RadioButton
+                            android:id="@+id/rb_lunch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@mipmap/lunch_white"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Lunch"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/activity_small_textSize" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/App_Gray" />
+
+                        <RadioButton
+                            android:id="@+id/rb_dinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@mipmap/dinner_white"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Dinner"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/activity_small_textSize" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_subscribeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/rb_sub_standard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pkg_type_back_grey"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Standard"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/activity_medium_textSize" />
+
+                    <RadioButton
+                        android:id="@+id/rb_sub_custom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pkg_type_back_grey"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Custom"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/activity_medium_textSize" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/rg_pkgType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3.2">
+
+                    <RadioButton
+                        android:id="@+id/rb_pkgType_silver"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pkg_type_back_blue"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Silver"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/activity_small_textSize" />
+
+                    <RadioButton
+                        android:id="@+id/rb_pkgType_gold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/pkg_type_back_grey"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Gold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/activity_small_textSize" />
+
+                    <RadioButton
+                        android:id="@+id/rb_pkgType_diamond"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/pkg_type_back_grey"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Diamond"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/activity_small_textSize" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/ll_customOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <!--     <FrameLayout
+                             android:id="@+id/fl_imgForOneDay"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_margin="10dp"
+                             android:visibility="visible">-->
+
+                    <ImageView
+                        android:id="@+id/iv_pkg_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/package_image" />
+
+                    <ListView
+                        android:id="@+id/lv_customOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:visibility="gone" />
+
+                    <!--</FrameLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_oneDayOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2.5">
+
+                    <LinearLayout
+                        android:id="@+id/ll_pkg_DescOneDay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_pkgName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:text="Package Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_medium_textSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_pkgDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:text="Package Description"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_small_textSize" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/iv_addMoreOneDayOrder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.5"
+                        android:src="@mipmap/add_more"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_dashboard_AddCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/transparency">
+
+        <LinearLayout
+            android:id="@+id/ll_addCart_oneDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="3">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tv_pkg_price_OneDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="0.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/activity_medium_textSize" />
+
+                <ImageView
+                    android:id="@+id/iv_oneDayProceed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/proceed" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_addCart_subscribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/App_subscribe_green"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--<ImageView
+                    android:id="@+id/iv_cart_subscribe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/cart"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"/>-->
+                <TextView
+                    android:id="@+id/tv_pkgPrice_Sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1.5"
+                    android:text="Package Price"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/activity_medium_textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_subscribeProceed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.8"
+                    android:gravity="center"
+                    android:text="Proceed"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/activity_medium_textSize" />
+
+                <ImageView
+                    android:id="@+id/iv_proceed_subscribe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:src="@mipmap/front_arrow" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_proceed_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/App_subscribe_green"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_proceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Proceed"
+                android:textAlignment="center"
+                android:textSize="@dimen/activity_medium_textSize"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_margin="5dp"
+                android:src="@mipmap/front_arrow" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>

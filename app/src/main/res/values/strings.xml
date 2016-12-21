@@ -1,0 +1,104 @@
+<resources>
+
+    <!--Side Panel icon array-->
+    <!--   <array name="nav_drawer_icons">
+           <item>@mipmap/profile</item>
+           <item>@mipmap/mealplans_1</item>
+           <item>@mipmap/address_book</item>
+           <item>@mipmap/wallet</item>
+           <item>@mipmap/change_password</item>
+           <item>@mipmap/call1</item>
+           <item>@mipmap/logout</item>
+           <item>@mipmap/login</item>
+           <item>@mipmap/register_user</item>
+       </array>
+   -->
+    <!--Side panel item name string array after login-->
+    <string-array name="navdraweritemsafterlogin">
+        <item>My Profile</item>
+        <item>My Orders</item>
+        <item>My Wallet</item>
+        <item>Contact Us</item>
+        <item>Logout</item>
+    </string-array>
+
+    <!--Side panel item name string array after login-->
+    <string-array name="navdraweritemsbeforelogin">
+        <item>My Profile</item>
+        <item>My Orders</item>
+        <item>My Wallet</item>
+        <item>Contact Us</item>
+        <item>Logout</item>
+    </string-array>
+
+
+    <string name="facebook_app_id">241941169513671</string>
+
+    <string name="coupon">Coupon Amount</string>
+    <string name="deliverychargetext">Delivery Charge</string>
+    <string name="onlinechargetext">Online Charge</string>
+    <string name="totaltext">Total Amount</string>
+    <string name="totalpay">Total Pay</string>
+    <string name="wallettext">Wallet Amount</string>
+    <string name="startdatetext">Start Date:-</string>
+    <string name="itemqtytext">Item Quantity</string>
+    <string name="enddatetext">End Date:-</string>
+    <string name="itempricetext">Item Price</string>
+    <string name="deliverattext">Deliver At</string>
+    <string name="addnewtext">Add new</string>
+    <string name="selectstartdatetext">Select Start Date</string>
+    <string name="applyredeemamttext">Apply Redeem Amount</string>
+    <string name="applycouponamttext">Apply Coupon Amount</string>
+    <string name="yourredeemamounttext">Your Redeem Amount</string>
+    <string name="yourorderamounttext">Your Order Amount</string>
+    <string name="enteramountheretext">Enter amount here</string>
+    <string name="applytext">Apply</string>
+    <string name="checkouttext">Checkout</string>
+    <string name="deliverylocationtext">Search For Delivery Location</string>
+    <string name="ordersummarytext">Bill Summary</string>
+    <string name="contactus">For more info and support, contact us!</string>
+    <string name="app_name">QuickMeal</string>
+    <string name="action_settings">Settings</string>
+    <string name="accessibility_overflow">Overflow</string>
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="zerocost">Rs.0.00</string>
+    <string name="closedrawer">closedrawer</string>
+    <string name="opendrawer">opendrawer</string>
+    <string name="imagedecription">imageview</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="feedbacktext">Feedback</string>
+    <string name="ordernowtext">Order Now</string>
+    <string name="sharetext">Share</string>
+    <string name="qty">Quantity :</string>
+    <string name="pkg">Package</string>
+    <string name="sms">SMS</string>
+    <string name="email">Email</string>
+    <string name="twitter">Twitter</string>
+    <string name="whats_app">Whats app</string>
+    <string name="facebook">facebook</string>
+    <string name="enteraddrsdetailtext">Enter Address Details</string>
+    <string name="streetnametext">Street name</string>
+    <string name="areanametext">Area name</string>
+    <string name="citynametext">City</string>
+    <string name="statetext">State</string>
+    <string name="pincodetext">Pincode</string>
+    <string name="landmarktext">Landmark(optional)</string>
+    <string name="h_notext">H.No/Flat No</string>
+    <string name="address">Address</string>
+    <string name="username"></string>
+    <string name="contact">Add to Cart</string>
+    <string name="addtocart">Add to Cart</string>
+    <string name="proceedtocart">Proceed to Cart</string>
+    <string name="setasdefaultaddresstext">Set as Default Address</string>
+    <string name="donetext">Done</string>
+    <string name="subtotaltext">Sub Total</string>
+    <string name="cost">Package Cost:-</string>
+    <string name="address_contact">address_contact</string>
+    <string name="contact_general">contact_general</string>
+    <string name="contact_callus1">contact_callus1</string>
+    <string name="contact_callus2">contact_callus2</string>
+    <string name="noadrsfound">No Address Found</string>
+    <string name="title_activity_new_implementations">NewImplementations</string>
+    <string name="loading">Loading...</string>
+
+</resources>

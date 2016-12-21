@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_toolbar_layout" />
+
+    <FrameLayout
+        android:id="@+id/fl_applyFilter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_heading_mealType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="Meal Type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/activity_medium_textSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_veg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_vegDisable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circle_meal_type_disable"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="20dp"
+                        android:src="@mipmap/veg" />
+
+                    <ImageView
+                        android:id="@+id/iv_vegEnable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/meal_type_veg"
+                        android:padding="30dp"
+                        android:src="@mipmap/veg_disable"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_mealType_veg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="Veg"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/activity_small_textSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_nonVeg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_nonVegDisable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/circle_meal_type_disable"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="20dp"
+                        android:src="@mipmap/nonveg_disable" />
+
+                    <ImageView
+                        android:id="@+id/iv_nonVegEnable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/meal_type_non_veg"
+                        android:padding="30dp"
+                        android:src="@mipmap/nonveg"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_mealType_non_veg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="Non-Veg"
+                        android:textColor="@color/gray" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_heading_mealCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="Meal Category"
+                android:textColor="@color/black"
+                android:textSize="@dimen/activity_medium_textSize" />
+
+
+            <ListView
+                android:id="@+id/lv_mealCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/transparency" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_applyFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="5dp"
+            android:background="@color/App_blue"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Apply Filter"
+            android:textSize="@dimen/activity_medium_textSize"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>
